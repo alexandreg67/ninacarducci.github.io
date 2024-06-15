@@ -148,6 +148,10 @@ body {
 	font-style: italic;
 	font-weight: 300;
 
+	font-size: 2em;
+    line-height: 1.2;
+    margin: 0.67em 0;
+
 }
 .quote__author {
 	font-family: Spectral;
