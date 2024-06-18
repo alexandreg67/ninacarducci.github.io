@@ -33,6 +33,10 @@ body {
 	padding-inline: 10px;
 }
 
+/* .nav-pills .nav-link.active {
+	background-color: #807833;
+} */
+
 .nav a {
 	text-decoration: none;
 	color: #000
