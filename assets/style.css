@@ -33,10 +33,6 @@ body {
 	padding-inline: 10px;
 }
 
-/* .nav-pills .nav-link.active {
-	background-color: #807833;
-} */
-
 .nav a {
 	text-decoration: none;
 	color: #000
@@ -88,6 +84,11 @@ body {
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+	line-height: 1.2;
 }
 #about-me p {
 	width: 80%;
@@ -111,7 +112,7 @@ body {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #857532;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
@@ -268,7 +269,7 @@ input[type="submit"] {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h3, #about-me p {
 		width: 100%;
 	}
 }
