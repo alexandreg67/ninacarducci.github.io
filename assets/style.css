@@ -98,9 +98,10 @@ body {
 
 #gallery picture {
 	/*	min-height: 100vh; */
+	width: 100%;
 }
 
-.carousel-inner .carousel-item img, picture {
+.carousel-inner .carousel-item img {
 	width: 100%;
 }
 
