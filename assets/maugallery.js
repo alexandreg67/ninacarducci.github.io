@@ -39,7 +39,6 @@
   $.fn.mauGallery.listeners = function(options) {
     $(".gallery-item img").on("click", function() {
       if (options.lightBox) {
-        console.log("Image clicked");
         $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
       } else {
         return;
@@ -48,11 +47,9 @@
 
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () => {
-      console.log("Prev button clicked");
       $.fn.mauGallery.methods.prevImage();
     });
     $(".gallery").on("click", ".mg-next", () => {
-      console.log("Next button clicked");
       $.fn.mauGallery.methods.nextImage();
     });
   };
@@ -100,7 +97,6 @@
       });
       console.log("Active image: ", activeImage);
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      console.log("Active tag: ", activeTag);
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column:visible img.gallery-img").each(function() {
@@ -121,20 +117,16 @@
         }
       });
       next = imagesCollection[index] || imagesCollection[imagesCollection.length - 1];
-      console.log("Next image: ", next);
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
-      console.log("Next image function called");
       let activeImage = null;
       $("img.gallery-img").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
       });
-      console.log("Active image: ", activeImage);
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      console.log("Active tag: ", activeTag);
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column:visible img.gallery-img").each(function() {
@@ -147,7 +139,6 @@
           }
         });
       }
-      console.log("Images collection: ", imagesCollection);
       let index = 0, next = null;
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
@@ -155,7 +146,6 @@
         }
       });
       next = imagesCollection[index] || imagesCollection[0];
-      console.log("Next image: ", next);
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
