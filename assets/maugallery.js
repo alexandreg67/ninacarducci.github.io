@@ -88,14 +88,12 @@
       $(`#${lightboxId}`).modal("toggle");
     },
     prevImage() {
-      console.log("Prev image function called");
       let activeImage = null;
       $("img.gallery-img").each(function() {
         if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
           activeImage = $(this);
         }
       });
-      console.log("Active image: ", activeImage);
       let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
@@ -109,7 +107,6 @@
           }
         });
       }
-      console.log("Images collection: ", imagesCollection);
       let index = 0, next = null;
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
